@@ -1,10 +1,10 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
-var Greeter = require("./components/Greeter");
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Greeter = require('Greeter');
 
-var name = "Дзюба"
+var firstName = 'Дзюба';
 
 ReactDOM.render(
-  <Greeter name={name} message="Вести с полей"/>,
-  document.getElementById("app")
+  <Greeter name={firstName}/>,
+  document.getElementById('app')
 );

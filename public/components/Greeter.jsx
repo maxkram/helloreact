@@ -1,33 +1,34 @@
-var React = require("react");
-var GreeterMessage = require("./GreeterMessage");
-var GreeterForm = require("./GreeterForm");
+var React = require('react');
+var GreeterMessage = require('GreeterMessage');
+var GreeterForm = require('GreeterForm');
 
 var Greeter = React.createClass({
-  getDefaultProps: function(){
-    return{
-      name:"React",
-      message: "Сообщение по дефолту"
+  getDefaultProps: function () {
+    return {
+      name: 'React',
+      message: 'сообщение по дефолту!'
     };
   },
-  getInitialState: function(){
-    return{
-      name:this.props.name,
-      message: this.props.message
+  getInitialState: function () {
+    return {
+        name: this.props.name,
+        message: this.props.message
     };
   },
-  handleNewData:function(updates){
+  handleNewData: function (updates) {
     this.setState(updates);
   },
-  render:  function(){
+  render: function () {
     var name = this.state.name;
     var message = this.state.message;
-    return(
+
+    return (
       <div>
         <GreeterMessage name={name} message={message}/>
         <GreeterForm onNewData={this.handleNewData}/>
-
       </div>
     );
   }
 });
+
 module.exports = Greeter;
